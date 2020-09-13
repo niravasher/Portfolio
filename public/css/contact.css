@@ -1,0 +1,68 @@
+* {
+  overflow: hidden;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(/super_mario/SuperMario256.ttf);
+}
+
+.main {
+  font-family: myFirstFont;
+}
+
+body {
+  height: 100vh;
+  background-image: url("/images/mario.gif"), url("/images/ground.png"), url("/images/back.png");
+  background-color: #F8E0B0;
+  background-repeat: no-repeat, repeat-x, repeat-x, repeat-x;
+  background-position: left 30% bottom 22px, left 0px bottom 0px, left 0px bottom 22px, left 0px bottom 0px;
+  animation: back 15s infinite linear;
+}
+
+@keyframes back {
+  0% {
+    background-position: left 30% bottom 22px, left 0px bottom 0px, left 0px bottom 22px, left 0px bottom 0px;
+  }
+  50% {
+    background-position: left 50% bottom 22px, left -816px bottom 0px, left -508px bottom 22px, left -256px bottom 0px;
+  }
+  100% {
+    background-position: left 30% bottom 22px, left -1632px bottom 0px, left -1016px bottom 22px, left -512px bottom 0px;
+  }
+}
+
+.visible-on-small-screens {
+  display: none;
+  width: 100vw;
+}
+
+@media (max-width: 1050px) {
+  .hidden-md {
+    display: none;
+  }
+
+  .visible-on-small-screens {
+    display: block;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 1050px) and (max-height: 720px) {
+  #content {
+    transform: scale(0.7) translateY(-15vh);
+  }
+}
+
+@media screen and (max-width: 1050px) and (max-height: 570px) {
+  #content {
+    transform: scale(0.6) translateY(-40vh);
+  }
+}

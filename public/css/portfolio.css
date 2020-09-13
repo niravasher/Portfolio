@@ -1,0 +1,221 @@
+* {
+  overflow: hidden;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(/super_mario/SuperMario256.ttf);
+}
+
+.main {
+  font-family: myFirstFont;
+}
+
+body {
+  height: 100vh;
+  background-image: url("/images/mario.gif"), url("/images/ground.png"), url("/images/back.png");
+  background-color: #F8E0B0;
+  background-repeat: no-repeat, repeat-x, repeat-x, repeat-x;
+  background-position: left 30% bottom 22px, left 0px bottom 0px, left 0px bottom 22px, left 0px bottom 0px;
+  animation: back 14s 4 linear;
+}
+
+@keyframes back {
+  0% {
+    background-position: left 30% bottom 22px, left 0px bottom 0px, left 0px bottom 22px, left 0px bottom 0px;
+  }
+  50% {
+    background-position: left 50% bottom 22px, left -816px bottom 0px, left -508px bottom 22px, left -256px bottom 0px;
+  }
+  100% {
+    background-position: left 30% bottom 22px, left -1632px bottom 0px, left -1016px bottom 22px, left -512px bottom 0px;
+  }
+}
+
+#numberOne {
+  width: 100vw;
+  animation: comeFirst 6s linear;
+  animation-fill-mode: forwards;
+  position: absolute;
+}
+
+#numberTwo {
+  visibility: hidden;
+  width: 100vw;
+  animation: comeFirst 6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  position: absolute;
+}
+
+#numberThree {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: comeFirst 6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 10s;
+}
+
+#numberFour {
+  visibility: hidden;
+  animation: comeFirst 6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 15s;
+  position: absolute;
+}
+
+#numberFive {
+  visibility: hidden;
+  animation: comeFirst 6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 20s;
+  position: absolute;
+}
+
+#numberSix {
+  visibility: hidden;
+  animation: comeFirst 6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 25s;
+  position: absolute;
+}
+
+#numberSeven {
+  visibility: hidden;
+  animation: comeFirst 6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 30s;
+  position: absolute;
+}
+
+#numberEight {
+  visibility: hidden;
+  animation: comeFirst 6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 35s;
+  position: absolute;
+}
+
+#numberNine {
+  visibility:hidden;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: comeFirst 6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 40s;
+}
+
+#numberTen {
+  visibility: hidden;
+  animation: comeFirst 6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 45s;
+  position: absolute;
+}
+
+#numberEleven {
+  visibility: hidden;
+  animation: comeLast 4s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 50s;
+  position: absolute;
+}
+
+@keyframes comeFirst {
+  0% {
+    visibility: visible;
+    left: 100%;
+  }
+  20% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  75% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  99% {
+    left: -80%;
+    visibility: hidden;
+  }
+  100% {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@keyframes comeLast {
+  0% {
+    visibility: visible;
+    left: 100%;
+  }
+  50% {
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: visible;
+  }
+  100% {
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: visible;
+  }
+}
+
+.visible-on-small-screens {
+  display: none;
+}
+
+.hidden-md {
+  display: block;
+}
+
+.google-font {
+  font-family: 'Grandstander', cursive;
+}
+
+.box-shadow-hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5), 0 2px 10px 0 rgba(0, 0, 0, 1);
+}
+
+img {
+  margin: auto;
+}
+
+@media (max-width: 1050px) {
+  
+  .hidden-md {
+    display: none;
+  }
+
+  .visible-on-small-screens {
+    display: block;
+  }
+
+  .cent {
+    transform: translateY(0vh);
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-height: 635px) {
+
+}
+
+@media (max-width: 325px) and (max-height: 570px) {
+
+  .hidden-xs {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+* {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(/super_mario/SuperMario256.ttf);
+}
+
+.main {
+  font-family: myFirstFont;
+}
+
+.google-font {
+  font-family: 'Grandstander', cursive;
+}
